@@ -1,0 +1,97 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
+
+.row{
+    @apply flex flex-wrap px-4 py-8 justify-start items-center font-medium;
+}
+
+.btn{
+    @apply px-4 py-2 w-full rounded-lg text-white bg-green-500;
+}
+.product .btn ,.categories .btn {
+    transition: transform 1s ,opacity 1s;
+    transform: translateY(100%);
+    opacity: 0;
+}
+.product:hover .btn , .categories:hover .btn {
+    opacity: 1;
+    transform: translateY(0%)
+}
+
+.category-img{
+    height: 200px;
+}
+img{
+    border-radius: 5px;
+}
+@media (max-width:1240px) {
+    .pr{
+     width: 50%;
+    }
+
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        /* background-color: aquamarine; */
+        
+    }   
+    .nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        /* flex-direction: row; */
+
+        /* background-color: blue; */
+    }
+    .nav-icon{
+        display: none;
+        /* background-color: brown; */
+        
+    
+    }
+ }
+@media (max-width:540px) {
+   .pr{
+    width: 100%;
+   }
+   .row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+}
+.related {
+    width: 75%;
+    margin-bottom: 30px;
+
+}
+
+.navbar{
+    display: flex;
+    /* background-color: aquamarine; */
+    
+}
+.nav-icon{
+    display: none;
+    
+
+}
+.main-slider{
+    width: 100%;
+    /* display: flex; */
+   
+}
+.side-slider{
+    /* width: 40% */
+    display: none;
+}
+    
+}
